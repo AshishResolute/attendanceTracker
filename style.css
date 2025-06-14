@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+        font-family: "Inter", sans-serif;
+        background:  linear-gradient(120deg,rgba(174, 238, 179, 1) 0%, rgba(148, 230, 233, 1) 81%);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 20px;
+      
+      }
+
+      .container {
+        padding: 35px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 850px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        border: 1px solid #e0e0e0;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 800;
+        text-align: center;
+        color: #3a3a3b;
+        margin-bottom: 32px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2b6cb0;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        border: 1px solid #d1d5db;
+        padding: 12px 18px;
+        border-radius: 10px;
+        font-size: 1.05rem;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+        outline: none;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+      }
+
+      button {
+        padding: 12px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        letter-spacing: 0.025em;
+        border: none;
+      }
+
+      .btn-primary {
+        background: greenyellow;
+        color: white;
+        display:block;
+        margin:0 auto;
+      }
+
+   
+      .btn-secondary {
+        background-color: #f3f4f6;
+        color: #4b5563;
+        border: 1px solid #d1d5db;
+      }
+
+      .btn-secondary:hover {
+        background-color: #e5e7eb;
+        color: #1f2937;
+      }
+
+      .add-subject-section {
+        margin-bottom: 24px;
+        padding: 24px;
+        border: 1px solid #90cdf4;
+        border-radius: 12px;
+        background-color: #ebf8ff;
+      }
+
+      .add-subject-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .add-subject-grid input:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .subjects-list-section {
+        margin-bottom: 24px;
+      }
+
+      .subjects-list-container {
+        margin-top: 16px;
+      }
+
+      #noSubjectsMessage {
+        color: #a0aec0;
+        text-align: center;
+        font-size: 1.125rem;
+        padding: 16px 0;
+      }
+
+      .subject-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid #eff6ff;
+      }
+      .subject-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .subject-item .subject-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%;
+      }
+
+      .subject-item .subject-info input[type="text"] {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #2d3748;
+        padding: 10px 14px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+      }
+
+      .subject-item .class-inputs {
+        display: flex;
+        gap: 16px;
+        margin-top: 8px;
+        width: 100%;
+      }
+
+      .subject-item .class-inputs input {
+        width: calc(50% - 8px);
+        text-align: center;
+        padding: 10px 14px;
+        border-radius: 8px;
+      }
+
+      .last-updated-date {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-top: 5px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .attendance-percentage {
+        width: 100px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: white;
+       
+      }
+
+      .attendance-percentage.text-green-600 {
+        background-color: #10b981;
+      }
+
+      .attendance-percentage.text-red-600 {
+        background-color: #ef4444;
+      }
+
+      .remove-subject-btn {
+        background-color: #dc2626;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      .remove-subject-btn:hover {
+        background-color: #b91c1c;
+      }
+      
+      button{
+        display: block;
+        margin:0 auto;
+        margin-bottom: 1rem;
+        margin-top:1rem;
+      }
+      
+
+      .alert-container {
+        position: fixed;
+        margin-bottom: 0.5rem;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+      }
+
+      .custom-alert {
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+        opacity: 0;
+        transform: translateX(120%);
+        transition: all 0.3s ease-out;
+        margin-bottom: 10px;
+      }
+      @media (min-width: 768px) {
+        .add-subject-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .add-subject-grid input:first-child {
+          grid-column: auto;
+        }
+
+        .subject-item {
+          flex-direction: row;
+
+          align-items: center;
+
+          gap: 15px;
+        }
+      }
+      #addSubjectBtn{
+        background: #000;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 25px;
+          gap: 20px;
+        }
+
+        .subject-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          padding: 15px;
+        }
+
+        .subject-item .subject-info {
+          width: 100%;
+        }
+
+        .subject-item .subject-info input {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+
+        .subject-item .class-inputs {
+          flex-direction: row;
+          width: 100%;
+        }
+
+        .subject-item .class-inputs input {
+          width: calc(50% - 8px);
+        }
+
+        .attendance-percentage {
+          width: 100%;
+          text-align: center;
+          font-size: 1rem;
+          padding: 10px;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .action-buttons button {
+          width: 100%;
+        }
+
+        .last-updated-date {
+          text-align: left;
+        }
+
+        .alert-container {
+          width: calc(100% - 40px);
+
+          right: 20px;
+          left: 20px;
+        }
+      }
