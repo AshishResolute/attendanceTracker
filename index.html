@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Attendance Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body >
+    <div >
+      <h1>College Attendance Tracker</h1>
+
+      <div class="add-subject-section">
+        <h2>Add New Subject</h2>
+        <div class="add-subject-grid">
+          <input type="text" id="newSubjectName" placeholder="Subject Name" />
+          <input
+            type="number"
+            id="newAttended"
+            placeholder="Classes Attended"
+          />
+          <input type="number" id="newTotal" placeholder="Total Classes" />
+        </div>
+        <button id="addSubjectBtn" class="btn-primary">Add Subject</button>
+      </div>
+
+      <div class="subjects-list-section">
+        <h2>Your Subjects</h2>
+        <div id="subjectsList" class="subjects-list-container">
+          <p id="noSubjectsMessage">No subjects added yet. Add one above!</p>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="saveDataBtn" class="btn-primary">Save All Data</button>
+        <button id="loadDataBtn" class="btn-secondary">Load Saved Data</button>
+        <button id="clearDataBtn" class="btn-secondary remove-subject-btn">
+          Clear All Data
+        </button>
+      </div>
+    </div>
+
+    <div id="alertContainer" class="alert-container"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
